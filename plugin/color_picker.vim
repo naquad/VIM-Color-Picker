@@ -268,7 +268,8 @@ function! s:ColorPicker()
   endif
 
   if empty(ccolor.color)
-    call s:SetAt(col('.'), col('.'), ncolor)
+    let ccol = col('.') - 1
+    call s:SetAt(ccol, ccol, ncolor)
   else
     call s:SetAt(ccolor.starts, ccolor.ends, ncolor)
   endif
