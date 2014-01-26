@@ -1,15 +1,16 @@
-This is a mirror of http://www.vim.org/scripts/script.php?script_id=3224
-
-VIM Color Picker is a simple color selector, based on GTK color chooser dialog. It permit you to easily insert an hexadecimal color in your CSS or HTML code. 
-
-SCREENSHOT:
-    http://static.flogisoft.com/vim/vim_color_picker_0.1.png
-
-USE:
-  When your are in insert mode or visual mode, press the <F5> button.
-  The color picker dialog appear, select a color and validate.
-
 DEPENDENCIES:
   For working, this script need:
     * VIM 7.x with Python support
-    * PyGTK 2.x
+    * Python3 along with Gtk3 introspection bindings 
+
+INSTALL:
+  Copy "color_picker.vim" and "color.py" in your pluggin directory,
+  don't forget to make "color.py" executable.
+
+USAGE:
+  Whenever your cursor is over the color you can :ColorPicker
+  and it'll start color dialog. After you accept new color
+  it'll replace old color. If there was no color under your cursor
+  it'll be simply inserted.
+
+  Supported color formats: all from http://www.w3.org/TR/css3-color/
