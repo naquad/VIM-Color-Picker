@@ -1,6 +1,6 @@
 DEPENDENCIES:
   For working, this script need:
-    * VIM 7.x with Python support
+    * VIM 7.x
     * Python3 along with Gtk3 introspection bindings 
 
 INSTALL:
