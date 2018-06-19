@@ -221,13 +221,13 @@ function! s:ExecuteScript(color)
     let cmdline .= ' ' . shellescape(a:color)
   endif
 
-  let output = system(cmdline)
+  let output = systemlist(cmdline)
 
   if v:shell_error
     return ''
   endif
 
-  return substitute(output, '\r\?\n', '', '')
+  return substitute(output[-1], '\r\?\n', '', '')
 endfunction
 
 " Replaces text at given start/end positions in current line
